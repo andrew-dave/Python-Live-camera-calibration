@@ -3,6 +3,8 @@
    Calibration of generic mobile camera using zhang's method in a live setting. The camera calibration was performed using OpenCV’s `calibrateCamera()` method. This approach retrieves the camera intrinsics, extrinsics, and all distortion parameters (both radial and tangential) using a 16x9 checkerboard for increased calibration accuracy due to more data points. The calibration uses frames from a live video feed on a smartphone, with an emphasis on minimizing reprojection error. 
 </p> 
    Another aspect is to understand the effects of calibration at varying distances, particularly looking into how the intrinsic parameters and the distortion values vary when performing the calibration procedure when close and far away from the checkerboard used for calibration. The variations in parameters and the discussion relating to the effects are as follows:
+   
+> **TEST**: **After calibration** run AR_prism.py to visualize how well the reprojection error has minimised indicating successful calibration by visualizing an augmentation of a prism on an apriltag(particularly tag36h11-change according to preference)
 
 ## Calibration at Different Distances
 
@@ -58,7 +60,6 @@
   - **Radial Distortion**: k1 = -0.1772, k2 = 5.2629, k3 = -40.4775 (lower in comparison)
   - **Tangential Distortion**: p1 = -0.0075, p2 = -0.0107
 
-> **TEST**: Run AR_prism.py to visualize how well the camera has been calibrated by visualizing an augmentation of a prism on an apriltag(particularly tag36h11-change according to preference)
 > 
 ### Observations and Reasoning
 
